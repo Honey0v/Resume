@@ -16,9 +16,8 @@ jobs:
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v2
       with:
-        aws-access-key-id: 
-        aws-secret-access-key: 
-        aws-region: ap-southeast-2  # S3 버킷 리전
+        role-to-assume: arn:aws:iam::869935090803:user/honey:role/GitHubActionsS3Role
+        aws-region: ap-southeast-2
 
     - name: Sync files to S3
       run: |
