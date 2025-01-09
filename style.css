@@ -5,29 +5,31 @@ body {
     padding: 0;
     background-color: #f9f9f9; /* 배경색 */
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100vh;
-    overflow-y: auto; /* 스크롤 활성화 */
+    justify-content: flex-start; /* 상단 정렬 */
+    align-items: flex-start; /* 좌측 정렬 */
+    height: auto; /* 높이 제한 제거 */
+    width: auto; /* 너비 제한 제거 */
+    overflow: scroll; /* 상하좌우 스크롤 활성화 */
 }
 
 /* A4 크기 설정 */
 .resume {
-    width: 21cm;
-    height: 29.7cm;
+    width: 793.7px;
+    height: 1122.5px; /* A4 크기 */
     background: white;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
     position: relative;
-    overflow: hidden;
-
+    overflow: visible; /* 내부 오버플로우 설정 */
     display: flex;
     flex-direction: row;
+    margin: 20px auto; /* 스크롤 시 여백 추가 */
 }
 
+
 .left{
-    width: 39%;
-    height: 100%;
+    width: 8.1cm;
+    height: 29.7cm;
     background: rgba(0, 110, 255, 0.04) ;
 }
 
@@ -74,6 +76,9 @@ body {
     font-size: 15px;
     margin-bottom: 10px;
     margin-left: 5px;
+}
+.contact a{
+    color: black; /* 글자색 변경 */
 }
 
 
@@ -199,7 +204,7 @@ body {
 .aboutMe p#introduce{
     margin: 0;
     padding: 0;
-    margin-top: 30px;
+    margin-top: 20px;
     font-size: 14px;
 }
 
